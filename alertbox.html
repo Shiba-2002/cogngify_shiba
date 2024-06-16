@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Based on Time</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 120px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showGreeting()">Click for Greeting</button>
+
+    <script>
+        function showGreeting() {
+            const currentHour = new Date().getHours();
+            let greeting;
+
+            if (currentHour >= 5 && currentHour < 12) {
+                greeting = "Good Morning!";
+            } else if (currentHour >= 12 && currentHour < 17) {
+                greeting = "Good Afternoon!";
+            } else if (currentHour >= 17 && currentHour < 21) {
+                greeting = "Good Evening!";
+            } else {
+                greeting = "Good Night!";
+            }
+
+            alert(greeting);
+        }
+    </script>
+</body>
+</html>
