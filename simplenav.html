@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Menu</title>
+    <style>
+        /* Basic reset for margin and padding */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a comfortable font size and family for the whole body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #e90932;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(190, 7, 7, 0.1);
+}
+
+/* Style the list of navigation items */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style individual navigation items */
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Add hover effect for navigation links */
+.nav-item a:hover {
+    background-color: #6b06c3;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#home">Home</a></li><br><br>
+            <li class="nav-item"><a href="#about">About</a></li><br><br>
+            <li class="nav-item"><a href="#contact">Contact</a></li><br><br>
+        </ul>
+    </nav>
+</body>
+</html>
