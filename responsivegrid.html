@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout with Bootstrap</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to Custom CSS -->
+   <style>
+    .card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #666;
+}
+
+.card-button {
+    margin-top: 10px;
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">Responsive Grid Layout</h1>
+
+        <div class="row" id="cardContainer">
+            <!-- Cards will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS (optional, for certain components) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link to Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const cardData = [
+        {
+            imageUrl: 'CAP.jpg',
+            title: 'CAPTAIN AMERICA',
+            description: 'Captain America, also known as Steve Rogers, epitomizes courage and integrity in the Marvel Universe. Enhanced by a super-soldier serum, he fights injustice with his iconic shield and unwavering determination. A symbol of heroism, Captain America inspires with his steadfast morals and unwavering dedication to defending freedom and justice for all'
+        },
+        {
+            imageUrl: 'iron.jpg',
+            title: 'IRON MAN',
+            description: 'Iron Man, the alter ego of billionaire inventor Tony Stark, is a technological marvel in the Marvel Universe. Clad in his high-tech suit of armor, Stark battles villains with ingenuity and advanced weaponry. Known for his sharp wit and brilliant mind, Iron Man uses his intellect to protect humanity, embodying the fusion of cutting-edge technology and heroism'
+        },
+        {
+            imageUrl: 'thor.jpg',
+            title: 'THOR',
+            description: 'Thor, the Norse god of thunder and a founding member of the Avengers in the Marvel Universe, wields the mighty Mjolnir, a hammer of immense power. As the Asgardian prince, Thor embodies strength and courage in battle, defending the realms from cosmic threats with his divine abilities and unwavering honor. With a noble heart and a warriors spirit, Thor stands as a formidable protector and a symbol of mythic heroism'
+        }
+    ];
+
+    const cardContainer = document.getElementById('cardContainer');
+
+    cardData.forEach(function(card) {
+        // Create card element
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('col-md-4');
+
+        // Card content
+        cardElement.innerHTML = `
+            <div class="card">
+                <img src="${card.imageUrl}" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <h5 class="card-title">${card.title}</h5>
+                    <p class="card-description">${card.description}</p>
+                    <a href="#" class="btn btn-primary card-button">Read More</a>
+                </div>
+            </div>
+        `;
+
+        // Append card to container
+        cardContainer.appendChild(cardElement);
+    });
+});
+
+    </script>
+</body>
+</html>
