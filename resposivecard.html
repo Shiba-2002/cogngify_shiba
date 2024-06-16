@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card with Bulma</title>
+    <!-- Link to Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Custom CSS for additional styling (optional) -->
+    <style>
+        body {
+            background-color: #22043a;
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-description {
+            margin-top: 15px;
+            color: #01040e;
+        }
+
+        .card-button {
+            margin-top: 20px;
+            color: #ae2020;
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive Card Component -->
+    <div class="card">
+        <div class="card-image">
+            <figure class="image is-16by9">
+                <img src="img.jpg" alt="Placeholder image">
+            </figure>
+        </div>
+        <div class="card-content">
+            <p class="title is-4">Beautiful Landscape</p>
+            <p class="subtitle is-6">Nature Photography</p>
+            <div class="card-description">
+                <p>In the heart of untouched wilderness, where the sunlight filters through towering trees to dapple the forest floor, nature unfolds its timeless allure. The air is alive with the symphony of birdsong,blending harmoniously with the rustling leaves and the gentle babble of nearby streams. Wildflowers paint the meadows in vibrant hues, while distant mountains stand as silent sentinels against the horizon. Each breath is a revelation, filled with the earthy scent of moss and the sweet fragrance of blossoms carried on the breeze. Here, amidst this serene expanse, one finds solace and inspiration, a sanctuary where the beauty of nature unfolds in its purest form.
+                </p>
+            </div>
+            <div class="card-button">
+                <button class="button is-primary">View Details</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
