@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Friendly Navigation Menu</title>
+    <style>
+        /* Reset styles and basic setup */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .navbar-toggler:focus {
+            outline: none;
+        }
+
+        .navbar-menu {
+            display: none;
+        }
+
+        .navbar-menu.active {
+            display: block;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .navbar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .navbar-nav li a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar-nav li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Logo</a>
+                <button class="navbar-toggler" id="navbarToggler">
+                    <span class="navbar-toggler-icon">&#9776;</span>
+                </button>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('navbarToggler').addEventListener('click', function() {
+            document.getElementById('navbarMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
